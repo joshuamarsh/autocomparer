@@ -1,0 +1,32 @@
+.header {
+  background-color: #FFF;
+  padding: 15px 0;
+  width: 100%;
+  box-shadow: 0 0.2rem 0.6rem 0.4rem rgba(0, 0, 0, 0.02);
+}
+
+.wrapper--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 160px;
+  height: 48px;
+}
+
+.main-menu {
+  display: flex;
+  align-items: center;
+
+  .main-menu__item {
+    list-style-type: none;
+    font-size: 16px;
+    padding: 0 15px;
+  }
+
+  .main-menu__link {
+    color: $color-dark;
+  }
+}

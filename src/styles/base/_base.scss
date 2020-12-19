@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Brown';
+  font-weight: 300;
+  src: local('Brown'), url(../../fonts/brown-light-webfont.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Brown';
+    font-weight: 400;
+    src: local('Brown'), url(../../fonts/brown-regular-webfont.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Brown';
+    font-weight: 700;
+    src: local('Brown'), url(../../fonts/brown-bold-webfont.woff) format('woff');
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Brown", sans-serif;
+  font-size: 16px;
+}
+
+.App {
+  background-color: $color-off-white;
+  min-height: 100vh;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.search-page {
+  display: inline-block;
+
+  &--left {
+    float: left;
+    width: 25%;
+    margin-right: 2%;
+  }
+
+  &--right {
+    width: 73%;
+  }
+}
+
+.banner {
+  background-image: url(../../images/banner-1.jpg);
+  height: 25em;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right center;
+  z-index: -1;
+  padding-top: 200px;
+
+  .banner__text {
+    text-align: center;
+    color: #FFF;
+
+    margin-bottom: 30px;
+  }
+}
+
+.provider-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 25px 0;
+
+  .provider-logos__item {
+    height: 25px;
+    width: 20%;
+    padding-right: 10px;
+
+    &:last-child {
+      padding: 0;
+    }
+  }
+}

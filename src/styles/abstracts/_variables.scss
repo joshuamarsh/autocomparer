@@ -1,0 +1,43 @@
+// Set the base font-size to allow better rem usability.
+// 1rem = 10px, 1.5rem = 15px, 2rem = 2px etc.
+$font-base: 62.5%;
+$font-heading: "Patua One", cursive;
+$font-stack: "Source Sans Pro", arial, sans-serif;
+$font-size: 1.8rem;
+$line-height: 1.5;
+
+// General content heading styles
+$font-size-h1: 4.5rem;
+$font-size-h2: 3rem;
+$font-size-h3: 1.5rem;
+$font-size-h4: 1.2rem;
+
+$font-size-small: 1.5rem;
+$font-size-medium: 1.8rem;
+$font-size-medium-large: 2.0rem;
+$font-size-large: 2.5rem;
+
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Breakpoints
+$breakpoint-x-small: "screen and (max-width: 600px)";
+$breakpoint-small: "screen and (max-width: 800px)";
+$breakpoint-medium: "screen and (max-width: 1000px)";
+$breakpoint-large: "screen and (max-width: 1200px)";
+$breakpoint-slider: "screen and (max-width: 1340px)";
+$breakpoint-large-medium: "screen and (max-width: 1450px)";
+// Have set a min-width breakpoint to target very large screens.
+$breakpoint-x-large: "screen and (min-width: 2000px)";
+
+// Colours
+$Graphic-Design-1-hex: #497CBF;
+$color-off-white: #F2F2F2;
+$color-primary: #497CBF;
+$Graphic-Design-4-hex: #1b242b;
+$Graphic-Design-5-hex: #011C26;
+$color-light: #FFF;
+$color-dark: #000;
+
+$box-shadow: 0px 0px 2px 0px rgba(156, 156, 156, 0.75);

@@ -1,0 +1,55 @@
+.car-spinner {
+	.car-spinner__body {
+		animation: shake 0.2s ease-in-out infinite alternate;
+	}
+	
+	.car-spinner__line {
+		transform-origin: center right;
+		stroke-dasharray: 22;
+		animation: line 1s ease-in-out infinite;
+		animation-fill-mode: both;
+		
+		&--top {
+			animation-delay: 0s;
+		}
+		
+		&--middle {
+			animation-delay: 0.2s;
+		}
+		
+		&--bottom {
+			animation-delay: 0.4s;
+		}
+	}
+}
+
+@keyframes shake {
+	0% {
+		transform: translateY(-0.8%);
+	}
+	100% {
+		transform: translateY(2.8%);
+	}
+}
+
+@keyframes line {
+	0% {
+		stroke-dashoffset: 22;
+	}
+	
+	25% {
+		stroke-dashoffset: 22;
+	}
+	
+	50% {
+		stroke-dashoffset: 0;
+	}
+	
+	80% {
+		stroke-dashoffset: -22;
+	}
+	
+	100% {
+		stroke-dashoffset: -22;
+	}
+}

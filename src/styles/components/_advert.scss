@@ -1,0 +1,100 @@
+.search-result-location {
+  font-size: 14px;
+  font-weight: 300;
+  margin: 5px 0;
+
+  .search-result-location__town {
+    text-transform: capitalize;
+  }
+}
+
+.search-result {
+  font-size: 14px;
+  font-weight: 300;
+
+  .search-result__title {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .search-result__price {
+    font-size: 16px;
+    font-weight: 400;;
+    margin: 5px 0;
+  }
+
+  .search-result__description {
+    margin: 5px 0;
+  }
+
+  .search-result__mileage {
+    margin: 5px 0;
+  }
+
+  .search-result__provider {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+}
+
+.search-results {
+  .search-results__item {
+    padding: 10px 0;
+    list-style-type: none;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.search-result {
+  width: 100%;
+  background-color: $color-light;
+  box-shadow: 0px 0px 1px 0px rgba(156, 156, 156, 1);
+  border-radius: 3px;
+  display: flex;
+
+  .search-result__image {
+    position: relative;
+    flex: 0 0 300px;
+    min-height: 230px;
+    
+    img {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 230px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .search-result__container {
+    padding: 10px 15px;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.search-container {
+  padding: 20px 0;
+}
+
+.search-results-loading {
+  text-align: center;
+  margin-top: 20px;
+
+  .search-results-loading__spinner {
+    transform: translateX(-20px);
+  }
+
+  .search-results-loading__title {
+    font-weight: 400;
+    color: #254158;
+  }
+}
