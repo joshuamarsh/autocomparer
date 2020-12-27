@@ -142,7 +142,7 @@ export function AdvertsSearchForm () {
           </select>
         </div> */}
         <div className="form-actions">
-          <button className="button" type="submit" >Search</button>
+          <button className="button" type="submit">Search</button>
         </div>
       </form>
     </div>

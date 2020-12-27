@@ -13,13 +13,25 @@ export const Adverts = withRouter(({ location }) => {
 
   const dispatch = useDispatch()
 
+  var params = React.useRef<AdvertSearchParams>();
   React.useEffect(() => {
-    const params: AdvertSearchParams = queryString.parse(location.search)
+    params.current = queryString.parse(location.search)
     if (params) {
-      params.provider = ['ebay', 'autotrader'];
-      dispatch(GetAdvert(params))
+      params.current.provider = ['ebay', 'autotrader'];
+      dispatch(GetAdvert(params.current))
     }
-  }, [location, dispatch])
+  }, [location, dispatch, params])
+
+  const nextPage = () => {
+    if (params.current) {
+      if (params.current?.page) {
+        params.current.page++
+      } else {
+        params.current.page = 2
+      }
+      dispatch(GetAdvert(params.current))
+    }
+  }
 
   return (
     <div className="search-container">
@@ -64,6 +76,13 @@ export const Adverts = withRouter(({ location }) => {
           })}
         </ul>
       )}
+      {(() => {
+        if (!advertsState.loading) {
+          return (
+            <div><button className="button" onClick={nextPage}>Load More</button></div>
+          );
+        }
+      })()}
     </div>
   );
 });
