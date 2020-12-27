@@ -14,11 +14,11 @@ export const Adverts = withRouter(({ location }) => {
   const dispatch = useDispatch()
 
   React.useEffect(() => {
-      const params: AdvertSearchParams = queryString.parse(location.search)
-      if (params) {
-        params.provider = ['ebay', 'autotrader'];
-        dispatch(GetAdvert(params))
-      }
+    const params: AdvertSearchParams = queryString.parse(location.search)
+    if (params) {
+      params.provider = ['ebay', 'autotrader'];
+      dispatch(GetAdvert(params))
+    }
   }, [location, dispatch])
 
   return (

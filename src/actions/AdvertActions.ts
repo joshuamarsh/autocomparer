@@ -19,7 +19,8 @@ export const GetAdvert = (AdvertSearch: AdvertSearchParams) => async (dispatch: 
         model: AdvertSearch.model,
         postcode: AdvertSearch.postcode,
         radius: AdvertSearch.radius,
-        sort: AdvertSearch.sort
+        sort: AdvertSearch.sort,
+        page: AdvertSearch.page
       },
       
       paramsSerializer: params => {

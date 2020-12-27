@@ -9,6 +9,7 @@ export type AdvertSearchParams = {
   postcode?: string
   radius?: string
   sort?: string
+  page?: number
 }
 
 export type AdvertSearchResponse = {
@@ -17,16 +18,16 @@ export type AdvertSearchResponse = {
 }
 
 export type Advert = {
-    provider: string
-    id: string
-    link: string
-    location: string
-    distance: number
-    title: string
-    price: number
-    mileage: string
-    description: string
-    image: string
+  provider: string
+  id: string
+  link: string
+  location: string
+  distance: number
+  title: string
+  price: number
+  mileage: string
+  description: string
+  image: string
 }
 
 export interface AdvertsLoading {
@@ -38,7 +39,7 @@ export interface AdvertsFail {
 }
 
 export interface AdvertsSuccess {
-  type: typeof ADVERTS_SUCCESS,
+  type: typeof ADVERTS_SUCCESS
   payload: AdvertSearchResponse
 }
 
